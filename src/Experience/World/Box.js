@@ -10,6 +10,7 @@ export default class Box {
       this.setGeometry()
       this.setMaterial()
       this.setMesh()
+      this.update()
    }
 
    setGeometry() {
@@ -24,5 +25,9 @@ export default class Box {
    setMesh() {
       this.mesh = new THREE.Mesh(this.geometry, this.material)
       this.scene.add(this.mesh)
+   }
+
+   update() {
+      this.mesh.rotation.y += 0.005
    }
 }

@@ -7,12 +7,20 @@ export default class Plane {
    constructor() {
 
       this.experience = new Experience()
+      this.debug = this.experience.debug
       this.scene = this.experience.scene
 
       this.setGeometry()
       this.setMaterial()
       this.setMesh()
       this.update()
+
+      if (this.debug) {
+         this.debugFolder = this.debug.addFolder({
+            title: 'Plane',
+            expanded: true
+         })
+      }
    }
 
    setGeometry() {

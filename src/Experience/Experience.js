@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import Sizes from "./Utils/Sizes.js"
 import Time from "./Utils/Time.js"
+import Mouse from "./Utils/Mouse.js"
 import Camera from './Camera.js'
 import Renderer from './Renderer.js'
 import World from './World/World.js'
@@ -22,6 +23,7 @@ export default class Experience {
       this.canvas = canvas
       this.setDebug()
       this.sizes = new Sizes()
+      this.mouse = new Mouse()
       this.time = new Time()
       this.scene = new THREE.Scene()
       this.resources = new Resources(sources)
